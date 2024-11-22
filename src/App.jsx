@@ -77,5 +77,21 @@ const App = () => {
     },
   ]);
 }
+<>
+  <h1>Zombie Fighters</h1>
+  <ul>
+    {zombieFighters.map((zombieFighter, index) => (
+      <li key={index}>
+          <img src={zombieFighter.img} alt={zombieFighters.name}/>
+          <li>{zombieFighter.name}</li>
+          <li>Price: {zombieFighter.price}</li>
+          <li>Stregth: {zombieFighter.strength}</li>
+          <li>Alility: {zombieFighter.aligity}</li>
+  
+      <button onClick={()=> handleAddFighter}>Add</button> 
+      </li>
+  ))}
+  </ul>
+</>
 
 export default App
